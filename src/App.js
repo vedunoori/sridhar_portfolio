@@ -17,6 +17,7 @@ function App() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+
       {isHovered && (
         <div
           className="shadow"

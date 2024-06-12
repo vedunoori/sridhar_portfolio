@@ -12,3 +12,18 @@
 } */
 
 
+.shape {
+  stroke-dasharray: 75 540;
+  stroke-dashoffset: -193px;
+  stroke-width: 5px;
+  fill: #0000;
+  stroke: #00b7c7;
+  border-bottom: 5px solid #000;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.resume-wrapper:hover .shape, #show-projects:hover .shape {
+  /* stroke-width: 2px; */
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}

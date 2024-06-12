@@ -7,6 +7,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import courseCard from './Images/course-card.webp'
+
+import resume from './sridharResume.pdf'
+import { auto } from '@popperjs/core';
 
 
 const PortPolfolio = () => {
@@ -55,7 +60,17 @@ const PortPolfolio = () => {
         <div className="container">
             <div className="maxScreen">
                 <div className='content'>
+                    <div class="resume-wrapper">
+                        <svg height="50" width="120" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="shape" height="50" width="120"></rect>
+                        </svg>
+                        <p class="resume-text">
+                            <a href={resume} target="_blank" rel="nofollow noopener noreferrer" >Resume</a>
+                        </p>
+                    </div>
+
                     <header className={'headerContent'}>
+
                         <div>
                             <h1 className={'userName'}>
                                 <a href="/">Sridhar Vedunoori</a>
@@ -109,15 +124,15 @@ const PortPolfolio = () => {
                                 <FontAwesomeIcon icon={faLinkedin} className='icon' />
                             </li>
                             <li className='icons_li'>
-                                <span>
-                                <FontAwesomeIcon icon={faInstagram} className='icon' />
-                                
+                                <span >
+                                    <FontAwesomeIcon icon={faInstagram} className='icon' />
+
                                 </span>
                             </li>
                             <li className='icons_li'>
                                 <span>
-                                <FontAwesomeIcon icon={faTwitter}  className='icon' />
-                                
+                                    <FontAwesomeIcon icon={faTwitter} className='icon' />
+
                                 </span>
                             </li>
 
@@ -128,7 +143,7 @@ const PortPolfolio = () => {
                             <div className='heading-xs'>ABOUT</div>
                             <div>
                                 <p className={'aboutContent'}>
-                                    Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a huge corporation, and a digital product studio.
+                                    Back in 2018, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a huge corporation, and a digital product studio.
                                 </p>
                                 <p className={'aboutContent'}>
                                     My main focus these days is building accessible user interfaces for our customers at Klaviyo. I most enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API.
@@ -138,18 +153,18 @@ const PortPolfolio = () => {
                             </div>
                         </section>
                         <section id="experience" className={'experienceSection section'}>
-                        <div className='heading-xs'>Experience</div>
+                            <div className='heading-xs'>Experience</div>
                             <div>
                                 <ol>
                                     <li className={'experienceLi'}>
                                         <div className='exp-card'>
                                             <Row>
-                                                <Col xs={3} md={3}>
+                                                <Col xs={12} md={3} >
                                                     <header className='exp-header'>
                                                         2024 — Present
                                                     </header>
                                                 </Col>
-                                                <Col xs={9} md={9}>
+                                                <Col xs={9} md={9} sm={12}>
                                                     <h3 className='disignation'>
                                                         <a href='https://www.wego.co.in/' target="_blank">
                                                             <span>
@@ -192,12 +207,12 @@ const PortPolfolio = () => {
                                     <li className={'experienceLi'}>
                                         <div className='exp-card'>
                                             <Row>
-                                                <Col xs={3} md={3}>
+                                                <Col xs={12} md={3}>
                                                     <header className='exp-header'>
                                                         2022 — 2024
                                                     </header>
                                                 </Col>
-                                                <Col xs={9} md={9}>
+                                                <Col xs={9} md={9} sm={12}>
                                                     <h3 className='disignation'>
                                                         <a href='https://www.wego.co.in/' target="_blank">
                                                             <span>
@@ -232,20 +247,18 @@ const PortPolfolio = () => {
                                                     </ul>
 
                                                 </Col>
-
-
                                             </Row>
                                         </div>
                                     </li>
                                     <li className={'experienceLi'}>
                                         <div className='exp-card'>
                                             <Row>
-                                                <Col xs={3} md={3}>
+                                                <Col xs={12} md={3}>
                                                     <header className='exp-header'>
                                                         2020 — 2022
                                                     </header>
                                                 </Col>
-                                                <Col xs={9} md={9}>
+                                                <Col xs={9} md={9} sm={12}>
                                                     <h3 className='disignation'>
                                                         <a href='https://www.wego.co.in/' target="_blank">
                                                             <span>
@@ -280,20 +293,18 @@ const PortPolfolio = () => {
                                                     </ul>
 
                                                 </Col>
-
-
                                             </Row>
                                         </div>
                                     </li>
                                     <li className={'experienceLi'}>
                                         <div className='exp-card'>
                                             <Row>
-                                                <Col xs={3} md={3}>
+                                                <Col xs={12} md={3}>
                                                     <header className='exp-header'>
                                                         2018 — 2020
                                                     </header>
                                                 </Col>
-                                                <Col xs={9} md={9}>
+                                                <Col xs={9} md={9} sm={12}>
                                                     <h3 className='disignation'>
                                                         <a href='https://www.wego.co.in/' target="_blank">
                                                             <span>
@@ -328,8 +339,6 @@ const PortPolfolio = () => {
                                                     </ul>
 
                                                 </Col>
-
-
                                             </Row>
                                         </div>
                                     </li>
@@ -338,17 +347,189 @@ const PortPolfolio = () => {
 
                         </section>
                         {/* <Row>
-                            <a href='/resume.pdf'>
+                            <a href={resume} target="_blank"
+                                rel="noopener noreferrer"
+                                className='viewResume'
+                            >
                                 <span>
                                     View Full Resume
+                                </span>
+                                <span>
+                                    <FontAwesomeIcon icon={faArrowRight} className='rightIcon' />
                                 </span>
                             </a>
                         </Row> */}
 
 
 
-                        <section id="projects" className={'section'}>
-                        <div className='heading-xs'>projects</div>
+                        <section id="projects" className={'experienceSection section'}>
+                            <div className='heading-xs'>Projects</div>
+                            <div>
+                                <ol>
+                                    <li className={'experienceLi'}>
+                                        <div className='exp-card'>
+                                            <Row>
+                                                <Col xs={12} md={3} >
+                                                    <img src={courseCard} width='100%' height='auto' className='exp-card-icon' />
+                                                </Col>
+                                                <Col xs={9} md={9} sm={12}>
+                                                    <h3 className='disignation'>
+                                                        Build a Spotify Connected
+                                                    </h3>
+                                                    <p className='about-postion'>
+                                                        Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                                                    </p>
+                                                </Col>
+
+
+                                            </Row>
+                                        </div>
+                                    </li>
+                                    <li className={'experienceLi'}>
+                                        <div className='exp-card'>
+                                            <Row>
+                                                <Col xs={12} md={3}>
+                                                    <header className='exp-header'>
+                                                        2022 — 2024
+                                                    </header>
+                                                </Col>
+                                                <Col xs={9} md={9} sm={12}>
+                                                    <h3 className='disignation'>
+                                                        <a href='https://www.wego.co.in/' target="_blank">
+                                                            <span>
+                                                                Senior Frontend Engineer, Accessibility ·
+                                                            </span>
+                                                        </a>
+                                                    </h3>
+                                                    <p className='about-postion'>
+                                                        Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                                                    </p>
+                                                    <ul className={'techGroup'}>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                JavaScript
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                TypeScript
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                React
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                StoryBook
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </li>
+                                    <li className={'experienceLi'}>
+                                        <div className='exp-card'>
+                                            <Row>
+                                                <Col xs={12} md={3}>
+                                                    <header className='exp-header'>
+                                                        2020 — 2022
+                                                    </header>
+                                                </Col>
+                                                <Col xs={9} md={9} sm={12}>
+                                                    <h3 className='disignation'>
+                                                        <a href='https://www.wego.co.in/' target="_blank">
+                                                            <span>
+                                                                Senior Frontend Engineer, Accessibility ·
+                                                            </span>
+                                                        </a>
+                                                    </h3>
+                                                    <p className='about-postion'>
+                                                        Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                                                    </p>
+                                                    <ul className={'techGroup'}>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                JavaScript
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                TypeScript
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                React
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                StoryBook
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </li>
+                                    <li className={'experienceLi'}>
+                                        <div className='exp-card'>
+                                            <Row>
+                                                <Col xs={12} md={3}>
+                                                    <header className='exp-header'>
+                                                        2018 — 2020
+                                                    </header>
+                                                </Col>
+                                                <Col xs={9} md={9} sm={12}>
+                                                    <h3 className='disignation'>
+                                                        <a href='https://www.wego.co.in/' target="_blank">
+                                                            <span>
+                                                                Senior Frontend Engineer, Accessibility ·
+                                                            </span>
+                                                        </a>
+                                                    </h3>
+                                                    <p className='about-postion'>
+                                                        Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                                                    </p>
+                                                    <ul className={'techGroup'}>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                JavaScript
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                TypeScript
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                React
+                                                            </div>
+                                                        </li>
+                                                        <li className={'techLi'}>
+                                                            <div className={'tech'}>
+                                                                StoryBook
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </section>
+
+                        {/* <section id="projects" className={'section'}>
+                            <div className='heading-xs'>projects</div>
                             <p className={'aboutContent'}>
                                 Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a huge corporation, and a digital product studio.
                             </p>
@@ -373,7 +554,7 @@ const PortPolfolio = () => {
                             </p>
 
                             <p>Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Vercel. All text is set in the Inter typeface.</p>
-                        </section>
+                        </section> */}
 
                         {/* <section id="writing" className={'aboutSection'}>
 
